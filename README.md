@@ -22,7 +22,7 @@ No framework is required. Publish the repository root from the `main` branch in 
 
 ## Before the final public launch
 
-1. Activate the private contact form with server-side delivery, spam protection and a professional reply address. Do not expose the destination email in the page source.
+1. The EN/ES contact forms use Formspree for server-side delivery. The destination address remains private in Formspree, and Formshield plus a honeypot provide spam protection.
 2. Replace provisional direction imagery progressively with photographs of physical E. DE BOER work.
 3. Connect `e-deboer.com` in GitHub Pages and add a `CNAME` file containing that domain.
 4. If `edeboer.com` is acquired later, make it canonical and configure a permanent 301 redirect from `e-deboer.com` at the DNS/edge layer.

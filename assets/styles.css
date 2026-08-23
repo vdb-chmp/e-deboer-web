@@ -503,6 +503,14 @@ img { display: block; max-width: 100%; }
 .enquiry-heading p { color: var(--stone); font-size: 0.72rem; }
 
 .enquiry-form { display: grid; gap: 2.25rem; }
+.enquiry-form .form-honeypot,
+.enquiry-form input[type="hidden"] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.25rem 1.5rem; }
 .enquiry-form label { display: grid; gap: 0.55rem; }
 .enquiry-form label > span { color: var(--stone); }
@@ -553,6 +561,17 @@ img { display: block; max-width: 100%; }
 }
 
 .form-action button:disabled { cursor: not-allowed; opacity: 0.48; }
+
+.form-status {
+  min-height: 1.2em;
+  margin: -0.85rem 0 0;
+  color: var(--stone);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.form-status[data-state="success"] { color: var(--weathered); }
+.form-status[data-state="error"] { color: var(--charcoal); }
 
 .form-action p {
   max-width: 28rem;

@@ -41,7 +41,10 @@
         <p>Contacto privado · España / Europa</p>
       </div>
 
-      <form class="enquiry-form">
+      <form class="enquiry-form" action="https://formspree.io/f/xrpzvrdy" method="post" data-success="Gracias. Tu consulta se ha enviado correctamente." data-error="No se ha podido enviar el mensaje. Inténtalo de nuevo.">
+        <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Nueva consulta desde la web E. DE BOER">
+        <input type="hidden" name="language" value="Español">
         <div class="form-grid">
           <label><span>Nombre</span><input type="text" name="name" autocomplete="name" required></label>
           <label><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
@@ -49,13 +52,14 @@
           <label><span>Ubicación</span><input type="text" name="location" autocomplete="country-name"></label>
         </div>
 
-        <label><span>¿Qué te gustaría transformar o crear?</span><textarea name="project" rows="5" required></textarea></label>
+        <label><span>¿Qué te gustaría transformar o crear?</span><textarea name="message" rows="5" required></textarea></label>
         <label><span>Plazo aproximado <small>Opcional</small></span><input type="text" name="timing"></label>
 
         <div class="form-action">
-          <button type="submit" disabled>Enviar consulta</button>
-          <p>El envío seguro se activará con e-deboer.com. Tus datos solo se utilizarán para responder a esta consulta.</p>
+          <button type="submit">Enviar consulta</button>
+          <p>Tu consulta se entrega de forma segura. Tus datos solo se utilizarán para responder.</p>
         </div>
+        <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
@@ -64,5 +68,6 @@
   <!-- Cloudflare Web Analytics: sustituye CLOUDFLARE_WEB_ANALYTICS_TOKEN y descomenta el script.
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"CLOUDFLARE_WEB_ANALYTICS_TOKEN"}'></script>
   -->
+  <script src="../assets/contact-form.js" defer></script>
 </body>
 </html>
