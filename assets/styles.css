@@ -125,6 +125,14 @@ main { overflow: hidden; }
   line-height: 1.12;
   letter-spacing: -.02em;
 }
+.hero-focus {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: .68rem;
+  letter-spacing: .12em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
 .hero-link {
   align-self: flex-start;
   margin-top: clamp(3rem, 7vw, 6.5rem);
@@ -327,6 +335,46 @@ main { overflow: hidden; }
 .contact-label { font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
 .contact-value { font-family: var(--serif); font-size: 1.2rem; }
 .contact-value.placeholder { color: var(--muted); font-style: italic; }
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 1rem;
+  margin-top: 2.5rem;
+}
+.form-field { display: grid; gap: .55rem; }
+.form-field-wide, .form-submit, .form-status { grid-column: 1 / -1; }
+.form-field label {
+  color: var(--muted);
+  font-size: .62rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding: .7rem 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+}
+.form-field textarea { resize: vertical; min-height: 7rem; }
+.form-field input:focus,
+.form-field textarea:focus { outline: 0; border-color: var(--ink); }
+.form-submit {
+  width: fit-content;
+  border: 1px solid var(--line);
+  padding: .85rem 1.15rem;
+  background: transparent;
+  color: var(--muted);
+  font-size: .62rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.form-submit:disabled { cursor: not-allowed; opacity: .75; }
+.form-status { margin: 0; color: var(--muted); font-size: .72rem; line-height: 1.5; }
 
 .site-footer {
   padding: 2rem var(--pad);
@@ -377,6 +425,8 @@ main { overflow: hidden; }
   .contact-layout { min-height: calc(100svh - 66px); padding-top: 4rem; }
   .contact-title { font-size: clamp(4.5rem, 25vw, 7rem); }
   .contact-row { grid-template-columns: 6rem 1fr; }
+  .contact-form { grid-template-columns: 1fr; }
+  .form-field-wide, .form-submit, .form-status { grid-column: auto; }
   .site-footer { flex-direction: column; gap: .5rem; }
 }
 
