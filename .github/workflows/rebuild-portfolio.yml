@@ -1,0 +1,33 @@
+name: Rebuild portfolio index
+
+on:
+  push:
+    paths:
+      - "content/projects/**"
+      - "scripts/build-project-index.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Rebuild public project data
+        run: node scripts/build-project-index.mjs
+
+      - name: Commit generated index when changed
+        run: |
+          if git diff --quiet -- data/projects.json projects es/projects sitemap.xml; then
+            echo "Generated portfolio pages are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/projects.json projects es/projects sitemap.xml
+          git commit -m "Studio: rebuild portfolio pages"
+          git push

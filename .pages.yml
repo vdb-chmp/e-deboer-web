@@ -1,0 +1,118 @@
+media:
+  - name: project_images
+    label: Project images
+    input: assets/images
+    output: assets/images
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+settings:
+  hide: true
+  commit:
+    identity: user
+    templates:
+      create: "Studio: add {path}"
+      update: "Studio: update {path}"
+      delete: "Studio: remove {path}"
+      rename: "Studio: rename {oldPath} -> {newPath}"
+
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: content/projects
+    format: json
+    filename:
+      template: "{fields.slug}.json"
+      field: false
+    operations:
+      create: true
+      rename: false
+      delete: false
+    view:
+      primary: title_en
+      fields: [published, featured, order, title_es]
+      sort: [order, title_en]
+      search: [title_en, title_es, label_en, label_es]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: slug
+        label: Slug / URL ID
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Use lowercase letters, numbers and hyphens only. Example: giant-botanical-installation"
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+      - name: featured
+        label: Show on Home
+        type: boolean
+        default: false
+      - name: order
+        label: Display order
+        type: number
+        required: true
+      - name: title_en
+        label: Title — English
+        type: string
+        required: true
+      - name: title_es
+        label: Title — Español
+        type: string
+        required: true
+      - name: label_en
+        label: Category / label — English
+        type: string
+      - name: label_es
+        label: Categoría / etiqueta — Español
+        type: string
+      - name: summary_en
+        label: Description — English
+        type: text
+      - name: summary_es
+        label: Descripción — Español
+        type: text
+      - name: year
+        label: Year
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: cover
+        label: Cover image
+        type: image
+        required: true
+        options:
+          media: project_images
+          path: projects
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: gallery
+        label: Additional gallery images
+        type: image
+        options:
+          media: project_images
+          path: projects
+          multiple:
+            max: 16
+          unique: true
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: alt_en
+        label: Image alt text — English
+        type: text
+      - name: alt_es
+        label: Texto alternativo — Español
+        type: text
+      - name: caption_en
+        label: Caption — English
+        type: string
+      - name: caption_es
+        label: Pie de foto — Español
+        type: string

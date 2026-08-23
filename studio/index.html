@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#ebe6dc">
+  <title>Studio — E. DE BOER</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="studio-page-body">
+  <a class="skip-link" href="#studio-main">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="E. DE BOER">E. DE BOER</a>
+    <nav class="site-nav" aria-label="Studio navigation">
+      <a href="../index.html">Website</a>
+      <a href="./" aria-current="page">Studio</a>
+    </nav>
+  </header>
+
+  <main class="studio-shell" id="studio-main">
+    <section class="studio-intro intro-motion">
+      <p class="section-index">PRIVATE / STUDIO</p>
+      <h1>Manage the archive.</h1>
+      <p class="studio-lede">Añade, edita, ordena y oculta proyectos sin tocar el código de la web.</p>
+      <div class="studio-actions">
+        <a class="studio-button" href="https://app.pagescms.org" rel="noopener noreferrer">Open private editor <span aria-hidden="true">↗</span></a>
+        <a class="small-link" href="../work.html">View public work <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="studio-guide" aria-label="Cómo funciona">
+      <article>
+        <p class="section-index">01</p>
+        <h2>Projects</h2>
+        <p>En el editor abre <strong>Projects</strong>. Cada entrada es un proyecto independiente.</p>
+      </article>
+      <article>
+        <p class="section-index">02</p>
+        <h2>Add & edit</h2>
+        <p>Cambia título, textos EN/ES, orden, portada y hasta 16 imágenes adicionales. Los cambios quedan registrados en GitHub.</p>
+      </article>
+      <article>
+        <p class="section-index">03</p>
+        <h2>Publish safely</h2>
+        <p>Usa <strong>Published</strong> para mostrar u ocultar. El borrado y el cambio de nombre están bloqueados en el panel. Para retirar algo, apaga <strong>Published</strong>.</p>
+      </article>
+      <article>
+        <p class="section-index">04</p>
+        <h2>Security</h2>
+        <p>El editor requiere autenticación con GitHub. Esta página no contiene contraseñas, tokens ni secretos.</p>
+      </article>
+    </section>
+
+    <aside class="studio-note">
+      <p><strong>First access:</strong> inicia sesión en Pages CMS con GitHub, instala su GitHub App únicamente en el repositorio <code>vdb-chmp/e-deboer-web</code> y ábrelo. La configuración <code>.pages.yml</code> ya está preparada. Un pequeño proceso automático reconstruye el índice público después de cada cambio.</p>
+      <p>Cuando el dominio propio esté detrás de Cloudflare, protege además la ruta <code>/studio/*</code> con Cloudflare Access y una regla Allow limitada a tu identidad.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><span>E. DE BOER</span><span>Private Studio Gateway</span><span>Spain / Europe</span></footer>
+</body>
+</html>

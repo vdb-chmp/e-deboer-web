@@ -1,0 +1,20 @@
+{
+  "slug": "weathered-surface",
+  "published": true,
+  "featured": true,
+  "order": 4,
+  "title_en": "Weathered Surface",
+  "title_es": "Superficie Envejecida",
+  "label_en": "MATERIAL STUDY — SURFACE",
+  "label_es": "ESTUDIO DE MATERIALES — SUPERFICIE",
+  "summary_en": "Age, erosion and layered material considered as visual language.",
+  "summary_es": "Edad, erosión y capas de materia entendidas como lenguaje visual.",
+  "year": "",
+  "location": "",
+  "cover": "assets/images/work-texture.webp",
+  "gallery": [],
+  "alt_en": "Close detail of a folded and weathered organic surface",
+  "alt_es": "Detalle cercano de una superficie orgánica plegada y envejecida",
+  "caption_en": "Visual direction study",
+  "caption_es": "Estudio de dirección visual"
+}
