@@ -22,7 +22,7 @@
       <h1 class="contact-title">LET'S<br>MAKE.</h1>
       <p class="contact-copy">For commissions, collaborations, scenic fabrication and production enquiries.</p>
     </section>
-    <section class="contact-details reveal" aria-label="Contact details">
+    <section class="contact-details reveal" aria-label="Project enquiry">
       <div class="contact-row">
         <span class="contact-label">Email</span>
         <span class="contact-value placeholder">To be connected with the domain</span>
@@ -35,6 +35,26 @@
         <span class="contact-label">Available for</span>
         <span class="contact-value">Stage · Film · Events · Visual Media</span>
       </div>
+      <form class="contact-form" aria-describedby="form-status">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email">
+        </div>
+        <div class="form-field">
+          <label for="project">Project</label>
+          <input id="project" name="project" type="text" placeholder="Stage, film, event or visual space">
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="message">Tell me about the space</label>
+          <textarea id="message" name="message" rows="5" placeholder="A short outline of the project, setting and timing"></textarea>
+        </div>
+        <button class="form-submit" type="button" disabled>Enquiries opening soon</button>
+        <p class="form-status" id="form-status">The secure enquiry service is not connected yet. This form does not send or store information.</p>
+      </form>
     </section>
   </main>
 
